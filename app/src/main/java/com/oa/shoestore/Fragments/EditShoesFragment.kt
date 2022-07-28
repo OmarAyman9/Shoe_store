@@ -34,7 +34,7 @@ class EditShoesFragment : Fragment() {
 
         shoeViewModel = ViewModelProvider(requireActivity())[ShoeListViewModel::class.java]
         binding.viewModel = shoeViewModel
-        binding.shoeInput = Shoe("", "", "", "")
+        binding.shoeInput = Shoe("Shoe", "Company", "7", "BlackShoe")
         shoeViewModel.added.observe(viewLifecycleOwner, Observer { isAdded ->
             if (isAdded) {
                 findNavController().navigate(R.id.action_editShoesFragment_to_shoesListFragment)
